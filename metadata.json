@@ -1,0 +1,6 @@
+{
+  "name": "Jellycat Discount Portal",
+  "description": "Claim your instant exclusive Jellycat London promotional discount code valid storewide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
