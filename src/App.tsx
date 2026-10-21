@@ -9,13 +9,10 @@ import {
   Star, 
   ArrowRight, 
   Gift, 
-  Volume2, 
-  VolumeX, 
   CheckCircle2, 
-  RotateCw,
+  RotateCw, 
   Check
 } from 'lucide-react';
-import { DunkinDonutIcon } from './components/DunkinDonutIcon';
 import { DunkinLogo } from './components/DunkinLogo';
 import { DoodleUnderline } from './components/DoodleUnderline';
 import { InfoModal } from './components/InfoModal';
@@ -30,7 +27,6 @@ export default function App() {
   const [generationStep, setGenerationStep] = useState<number>(1);
   const [claimedCount, setClaimedCount] = useState(3106);
   const [infoModalType, setInfoModalType] = useState<'how-it-works' | 'faq' | 'verified' | null>(null);
-  const [soundEnabled, setSoundEnabled] = useState(true);
   const [codeCopied, setCodeCopied] = useState(false);
   const discountCode = 'DUNKIN60';
 
@@ -56,9 +52,7 @@ export default function App() {
     setGenerationStep(1);
     setCodeCopied(false);
 
-    if (soundEnabled) {
-      playSuccessPop();
-    }
+    playSuccessPop();
 
     // Step 1: Checking promotional availability
     const t1 = setTimeout(() => {
@@ -73,14 +67,12 @@ export default function App() {
     // Step 3: Complete & Transition to "Your Discount Voucher is Ready!"
     const t3 = setTimeout(() => {
       setClaimState('ready');
-      if (soundEnabled) {
-        playChime();
-      }
+      playChime();
       confetti({
         particleCount: 75,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#0B4EA2', '#F59E0B', '#38BDF8', '#FCD34D', '#10B981'],
+        colors: ['#FF671F', '#DA1A5F', '#38BDF8', '#FCD34D', '#10B981'],
       });
     }, 2300);
 
@@ -100,14 +92,12 @@ export default function App() {
       // ignore
     }
     setCodeCopied(true);
-    if (soundEnabled) {
-      playSuccessPop();
-    }
+    playSuccessPop();
     confetti({
       particleCount: 40,
       spread: 50,
       origin: { y: 0.7 },
-      colors: ['#1D4ED8', '#F59E0B', '#10B981'],
+      colors: ['#FF671F', '#DA1A5F', '#10B981'],
     });
     setTimeout(() => setCodeCopied(false), 3000);
   };
@@ -125,53 +115,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen relative bg-[#F8FAFC] bg-grid-pattern overflow-x-hidden flex flex-col justify-between selection:bg-amber-200 selection:text-amber-900">
+    <div className="min-h-screen relative bg-white overflow-x-hidden flex flex-col justify-between selection:bg-pink-100 selection:text-pink-900">
       
-      {/* Scattered Floating Dunkin Donuts (Subtle pastel floating donuts in orange & pink) */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        {/* Top Left - Pink Glazed Donut */}
-        <div className="absolute top-12 left-6 sm:left-14 animate-float-slow">
-          <DunkinDonutIcon color="pink" size={36} rotation={-15} opacity={0.75} />
-        </div>
-
-        {/* Middle Left - Orange Glazed Donut */}
-        <div className="absolute top-[48%] left-4 sm:left-12 animate-float-reverse">
-          <DunkinDonutIcon color="orange" size={32} rotation={25} opacity={0.75} />
-        </div>
-
-        {/* Top Right - Orange Glazed Donut */}
-        <div className="absolute top-28 right-6 sm:right-16 animate-float-reverse">
-          <DunkinDonutIcon color="orange" size={30} rotation={-20} opacity={0.75} />
-        </div>
-
-        {/* Bottom Right - Pink Glazed Donut */}
-        <div className="absolute top-[65%] right-6 sm:right-20 animate-float-slow">
-          <DunkinDonutIcon color="pink" size={36} rotation={18} opacity={0.75} />
-        </div>
-
-        {/* Subtle extra ambient donuts */}
-        <div className="absolute bottom-16 left-1/4 opacity-35 hidden md:block">
-          <DunkinDonutIcon color="pink" size={24} rotation={45} opacity={0.4} />
-        </div>
-        <div className="absolute top-1/3 right-1/4 opacity-35 hidden md:block">
-          <DunkinDonutIcon color="orange" size={26} rotation={-35} opacity={0.4} />
-        </div>
-      </div>
-
-      {/* Top Bar Utilities */}
-      <header className="relative z-10 w-full px-4 sm:px-8 py-3 flex items-center justify-end">
-        <button
-          onClick={() => setSoundEnabled(!soundEnabled)}
-          className="text-slate-400 hover:text-slate-600 p-1.5 rounded-full hover:bg-slate-200/50 transition-colors"
-          title={soundEnabled ? 'Mute audio' : 'Enable audio'}
-          aria-label="Toggle sound"
-        >
-          {soundEnabled ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
-        </button>
-      </header>
-
       {/* Main Hero & Claim Section */}
-      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-4 sm:py-8">
+      <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-8 sm:py-12">
         
         {/* Top Dunkin' Donuts Brand Badge */}
         <div className="flex flex-col items-center">
@@ -546,8 +493,7 @@ export default function App() {
 
       </main>
 
-      {/* Footer Section (Matches Reference Image 2: Made with love. • Verified Offer • How It Works • FAQ) */}
-      <footer className="relative z-10 w-full py-6 px-4 text-center space-y-2 border-t border-slate-200/50 mt-8 bg-white/40 backdrop-blur-xs">
+      <footer className="relative z-10 w-full py-6 px-4 text-center space-y-2 border-t border-slate-100 mt-8 bg-white">
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-slate-500 font-medium">
           <span>Made with love.</span>
           <span className="text-slate-300">•</span>
