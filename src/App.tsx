@@ -4,7 +4,7 @@ import {
   CheckCircle2, 
   Sparkles
 } from 'lucide-react';
-import { DunkinLogo } from './components/DunkinLogo';
+import { DrinkDiscountLogo } from './components/DrinkDiscountLogo';
 import { InfoModal } from './components/InfoModal';
 import { PeelCouponButton } from './components/PeelCouponButton';
 import { playChime, playSuccessPop } from './utils/audio';
@@ -60,9 +60,9 @@ export default function App() {
       {/* Main Hero Section */}
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-8 sm:py-14 text-center">
         
-        {/* Dunkin' Donuts Brand Logo */}
+        {/* Drink Discount Brand Logo */}
         <div className="mb-6 sm:mb-7 flex justify-center">
-          <DunkinLogo size={112} />
+          <DrinkDiscountLogo size={124} />
         </div>
 
         {/* ======================================================== */}
@@ -78,15 +78,15 @@ export default function App() {
               </span>
             </div>
 
-            {/* Brand Title: Dunkin' (Orange) Donuts (Dark Navy) */}
+            {/* Brand Title: Drink (Orange) Discount (Dark Navy) */}
             <h1 className="text-5xl sm:text-6xl md:text-[76px] font-black tracking-tight leading-none">
-              <span className="text-[#F26522]">Dunkin&apos;</span>{' '}
-              <span className="text-[#191D34]">Donuts</span>
+              <span className="text-[#F26522]">Drink</span>{' '}
+              <span className="text-[#191D34]">Discount</span>
             </h1>
 
             {/* Subtitle */}
             <p className="mt-5 sm:mt-6 text-base sm:text-xl text-[#334155] max-w-xl mx-auto leading-relaxed font-normal">
-              Claim your exclusive discount today. America runs on Dunkin&apos;.
+              Claim your exclusive discount today. Valid on all drinks and refreshments.
             </p>
 
             {/* Red CTA Button: Claim Discount */}
@@ -224,7 +224,7 @@ export default function App() {
 
             {/* Subtitle */}
             <p className="text-xs sm:text-sm text-slate-500 max-w-sm mx-auto leading-relaxed">
-              Use code at checkout for your <strong className="text-slate-800">Dunkin&apos; Donuts</strong> orders — valid for all purchases today.
+              Use code at checkout for your <strong className="text-slate-800">Drink Discount</strong> orders — valid for all purchases today.
             </p>
 
             {/* Dashed Yellow Coupon Ticket Box with Left & Right Cutout Notches */}
@@ -305,7 +305,7 @@ export default function App() {
         </div>
 
         <p className="text-[11px] text-slate-400">
-          © Dunkin&apos; Donuts 2025 • Mobile Voucher Portal
+          © Drink Discount 2025 • Mobile Voucher Portal
         </p>
       </footer>
 

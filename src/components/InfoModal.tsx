@@ -17,7 +17,8 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#FF671F] to-[#DA1A5F] px-6 py-4 text-white flex items-center justify-between">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-[#FF671F] to-[#E61937] px-6 py-4 text-white flex items-center justify-between">
           <div className="flex items-center space-x-2.5">
             {type === 'how-it-works' && <Sparkles className="w-5 h-5 text-amber-200" />}
             {type === 'faq' && <HelpCircle className="w-5 h-5 text-amber-200" />}
@@ -25,7 +26,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
             <h3 className="text-base font-bold text-white font-['Outfit',sans-serif]">
               {type === 'how-it-works' && 'How It Works'}
               {type === 'faq' && 'Frequently Asked Questions'}
-              {type === 'verified' && "Official Dunkin' Donuts Verified Offer"}
+              {type === 'verified' && 'Official Drink Discount Verified Offer'}
             </h3>
           </div>
           <button
@@ -41,7 +42,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
           {type === 'how-it-works' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                Claiming and redeeming your Dunkin&apos; Donuts discount takes less than 30 seconds:
+                Claiming and redeeming your Drink Discount voucher takes less than 30 seconds:
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
@@ -57,13 +58,13 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
                 </div>
 
                 <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-7 h-7 rounded-full bg-[#DA1A5F] text-white flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-7 h-7 rounded-full bg-[#E61937] text-white flex items-center justify-center font-bold text-xs shrink-0">
                     2
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-800">Copy or Save Your Code</h5>
+                    <h5 className="font-bold text-slate-800">Tap &quot;Show Coupon Code&quot;</h5>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Copy your unique code with 1-click or scan the barcode if visiting a participating store or drive-thru.
+                      Instantly unlock and access your promotional voucher code.
                     </p>
                   </div>
                 </div>
@@ -75,7 +76,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
                   <div>
                     <h5 className="font-bold text-slate-800">Enjoy Your Savings</h5>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Apply at checkout for fresh brewed coffee, espresso drinks, donuts, Munchkins, and breakfast sandwiches!
+                      Apply at checkout for drinks, coffees, smoothies, sodas, and refreshing beverages!
                     </p>
                   </div>
                 </div>
@@ -86,23 +87,23 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
           {type === 'faq' && (
             <div className="space-y-3">
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
-                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Is this valid on all Dunkin&apos; items?</h5>
+                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Is this valid on all drinks?</h5>
                 <p className="text-xs text-slate-500">
-                  Yes! The promotional code applies storewide across all popular items including hot & iced coffee, lattes, refresher drinks, donuts, bakery items, and breakfast sandwiches.
+                  Yes! The promotional code applies storewide across popular beverages including hot & iced coffee, fountain sodas, milkshakes, smoothies, and specialty drinks.
                 </p>
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
-                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Can I use it both in the Dunkin&apos; App and in-store?</h5>
+                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Can I use it online and in-store?</h5>
                 <p className="text-xs text-slate-500">
-                  Yes, you can enter the code online in the mobile app at checkout or show the digital voucher barcode to an associate at any participating store or drive-thru.
+                  Yes, you can enter the code online at checkout or show the digital voucher to the cashier when ordering.
                 </p>
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Does the voucher expire?</h5>
                 <p className="text-xs text-slate-500">
-                  Once generated, your code is reserved for 24 hours to guarantee allocation. Make sure to claim and copy it today.
+                  Once generated, your code is reserved for 24 hours to guarantee allocation. Make sure to claim and use it today.
                 </p>
               </div>
 
@@ -120,7 +121,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
               <div className="flex items-center gap-3 p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-900">
                 <ShieldCheck className="w-8 h-8 text-emerald-600 shrink-0" />
                 <div>
-                  <h5 className="font-bold text-xs sm:text-sm">Official Dunkin&apos; Donuts Verification</h5>
+                  <h5 className="font-bold text-xs sm:text-sm">Official Drink Discount Verification</h5>
                   <p className="text-xs text-emerald-700 mt-0.5">
                     Security Token: #DD-2025-VCH-99410
                   </p>
@@ -128,7 +129,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
               </div>
 
               <p className="text-xs leading-relaxed text-slate-600">
-                This promotional offer is provided directly through the official Mobile Voucher Gateway. Every voucher issued is authenticated against the master Dunkin&apos; promotional rewards system.
+                This promotional offer is provided directly through the official Mobile Voucher Gateway. Every voucher issued is authenticated against the master promotional rewards network.
               </p>
 
               <div className="grid grid-cols-2 gap-2 text-xs">
