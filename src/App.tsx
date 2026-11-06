@@ -62,7 +62,7 @@ export default function App() {
         
         {/* Drink Discount Brand Logo */}
         <div className="mb-6 sm:mb-7 flex justify-center">
-          <DrinkDiscountLogo size={124} />
+          <DrinkDiscountLogo size={130} />
         </div>
 
         {/* ======================================================== */}

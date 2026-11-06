@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import newLogoSrc from '../assets/images/drink_discount_logo_1793924189980.jpg';
+import badgeLogoSrc from '../assets/images/badge_circulaire_logo.png';
 
 interface DrinkDiscountLogoProps {
   className?: string;
@@ -8,21 +8,28 @@ interface DrinkDiscountLogoProps {
 
 export const DrinkDiscountLogo: React.FC<DrinkDiscountLogoProps> = ({
   className = '',
-  size = 124,
+  size = 130,
 }) => {
   const [imageError, setImageError] = useState(false);
 
   return (
     <div
       style={{ width: size, height: size }}
-      className={`relative rounded-full shadow-[0_12px_32px_rgba(242,101,34,0.22)] p-1 flex items-center justify-center bg-white border-2 border-orange-200/70 transition-transform duration-300 hover:scale-105 ${className}`}
+      className={`relative rounded-full shadow-[0_12px_36px_rgba(242,101,34,0.30)] flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-105 ${className}`}
     >
       {!imageError ? (
         <img
-          src={newLogoSrc}
-          alt="Drink Discount Logo"
-          onError={() => setImageError(true)}
-          className="w-full h-full object-cover rounded-full select-none pointer-events-none"
+          src={badgeLogoSrc}
+          alt="Drink Discount Official Logo"
+          onError={(e) => {
+            const target = e.currentTarget;
+            if (target.src !== '/assets/badge_circulaire_logo.png') {
+              target.src = '/assets/badge_circulaire_logo.png';
+            } else {
+              setImageError(true);
+            }
+          }}
+          className="w-full h-full object-cover scale-[1.03] select-none pointer-events-none rounded-full"
         />
       ) : (
         /* High-fidelity Vector Fallback */
