@@ -4,7 +4,7 @@ import {
   CheckCircle2, 
   Sparkles
 } from 'lucide-react';
-import { DrinkDiscountLogo } from './components/DrinkDiscountLogo';
+import { TargetDiscountLogo } from './components/TargetDiscountLogo';
 import { InfoModal } from './components/InfoModal';
 import { PeelCouponButton } from './components/PeelCouponButton';
 import { playChime, playSuccessPop } from './utils/audio';
@@ -41,7 +41,7 @@ export default function App() {
         particleCount: 75,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#FF671F', '#DA1A5F', '#38BDF8', '#FCD34D', '#10B981'],
+        colors: ['#CC0000', '#FF3B30', '#38BDF8', '#FCD34D', '#10B981'],
       });
     }, 2300);
 
@@ -55,14 +55,14 @@ export default function App() {
   const REDIRECT_URL = 'https://apptrck.net/cl/i/m5ndnm';
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-b from-[#FFF5ED] via-[#FFF1EB] to-[#FCECE8] overflow-x-hidden flex flex-col justify-between selection:bg-orange-100 selection:text-orange-900 font-['Plus_Jakarta_Sans',sans-serif]">
+    <div className="min-h-screen relative bg-gradient-to-b from-[#FFF6F6] via-[#FFF1F1] to-[#FDECEC] overflow-x-hidden flex flex-col justify-between selection:bg-red-100 selection:text-red-900 font-['Plus_Jakarta_Sans',sans-serif]">
       
       {/* Main Hero Section */}
       <main className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 py-8 sm:py-14 text-center">
         
-        {/* Drink Discount Brand Logo */}
+        {/* Target Discount Brand Logo */}
         <div className="mb-6 sm:mb-7 flex justify-center">
-          <DrinkDiscountLogo size={130} />
+          <TargetDiscountLogo size={124} />
         </div>
 
         {/* ======================================================== */}
@@ -71,29 +71,29 @@ export default function App() {
         {claimState === 'idle' && (
           <div className="w-full max-w-2xl mx-auto flex flex-col items-center animate-fade-in">
             
-            {/* Orange Pill: LIMITED TIME OFFER */}
+            {/* Red Pill: LIMITED TIME OFFER */}
             <div className="mb-6 sm:mb-8">
-              <span className="inline-block bg-[#F26522] text-white text-xs sm:text-sm font-black px-5 sm:px-6 py-2 rounded-full uppercase tracking-wider shadow-sm">
+              <span className="inline-block bg-[#CC0000] text-white text-xs sm:text-sm font-black px-5 sm:px-6 py-2 rounded-full uppercase tracking-wider shadow-[0_4px_14px_rgba(204,0,0,0.25)]">
                 LIMITED TIME OFFER
               </span>
             </div>
 
-            {/* Brand Title: Drink (Orange) Discount (Dark Navy) */}
+            {/* Brand Title: Target (Red) Discount (Dark Navy) */}
             <h1 className="text-5xl sm:text-6xl md:text-[76px] font-black tracking-tight leading-none">
-              <span className="text-[#F26522]">Drink</span>{' '}
+              <span className="text-[#CC0000]">Target</span>{' '}
               <span className="text-[#191D34]">Discount</span>
             </h1>
 
             {/* Subtitle */}
             <p className="mt-5 sm:mt-6 text-base sm:text-xl text-[#334155] max-w-xl mx-auto leading-relaxed font-normal">
-              Claim your exclusive discount today. Valid on all drinks and refreshments.
+              Claim your exclusive discount today. Valid for Target store & online purchases.
             </p>
 
             {/* Red CTA Button: Claim Discount */}
             <div className="mt-8 sm:mt-10">
               <button
                 onClick={startClaimFlow}
-                className="bg-[#E61937] hover:bg-[#D01430] active:scale-[0.98] text-white font-extrabold text-base sm:text-lg px-9 py-4 rounded-full shadow-[0_8px_25px_rgba(230,25,55,0.32)] hover:shadow-[0_10px_30px_rgba(230,25,55,0.42)] transition-all cursor-pointer"
+                className="bg-[#CC0000] hover:bg-[#B30000] active:scale-[0.98] text-white font-extrabold text-base sm:text-lg px-9 py-4 rounded-full shadow-[0_8px_25px_rgba(204,0,0,0.32)] hover:shadow-[0_10px_30px_rgba(204,0,0,0.42)] transition-all cursor-pointer"
               >
                 Claim Discount
               </button>
@@ -194,7 +194,7 @@ export default function App() {
                   )}
                 </div>
                 <span className={generationStep >= 3 ? 'font-semibold text-emerald-900/90' : 'text-slate-400 font-medium'}>
-                  Validating store discount voucher
+                  Validating Target store discount voucher
                 </span>
               </div>
 
@@ -224,7 +224,7 @@ export default function App() {
 
             {/* Subtitle */}
             <p className="text-xs sm:text-sm text-slate-500 max-w-sm mx-auto leading-relaxed">
-              Use code at checkout for your <strong className="text-slate-800">Drink Discount</strong> orders — valid for all purchases today.
+              Use code at checkout for your <strong className="text-slate-800">Target Discount</strong> orders — valid for all purchases today.
             </p>
 
             {/* Dashed Yellow Coupon Ticket Box with Left & Right Cutout Notches */}
@@ -272,16 +272,16 @@ export default function App() {
       </main>
 
       {/* Footer Section */}
-      <footer className="relative z-10 w-full py-6 px-4 text-center space-y-2 border-t border-orange-200/40 bg-white/30 backdrop-blur-xs">
+      <footer className="relative z-10 w-full py-6 px-4 text-center space-y-2 border-t border-red-200/40 bg-white/30 backdrop-blur-xs">
         <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-xs text-slate-500 font-medium">
           <span>Made with love.</span>
           <span className="text-slate-300">•</span>
           
           <button 
             onClick={() => setInfoModalType('verified')}
-            className="inline-flex items-center gap-1 text-[#E61937] hover:underline font-semibold cursor-pointer"
+            className="inline-flex items-center gap-1 text-[#CC0000] hover:underline font-semibold cursor-pointer"
           >
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#E61937]" />
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#CC0000]" />
             <span>Verified Offer</span>
           </button>
           
@@ -305,7 +305,7 @@ export default function App() {
         </div>
 
         <p className="text-[11px] text-slate-400">
-          © Drink Discount 2025 • Mobile Voucher Portal
+          © Target Discount 2025 • Mobile Voucher Portal
         </p>
       </footer>
 

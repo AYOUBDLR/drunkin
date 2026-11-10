@@ -18,7 +18,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
       >
         {/* Header */}
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#FF671F] to-[#E61937] px-6 py-4 text-white flex items-center justify-between">
+        <div className="bg-gradient-to-r from-[#CC0000] to-[#B30000] px-6 py-4 text-white flex items-center justify-between">
           <div className="flex items-center space-x-2.5">
             {type === 'how-it-works' && <Sparkles className="w-5 h-5 text-amber-200" />}
             {type === 'faq' && <HelpCircle className="w-5 h-5 text-amber-200" />}
@@ -26,7 +26,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
             <h3 className="text-base font-bold text-white font-['Outfit',sans-serif]">
               {type === 'how-it-works' && 'How It Works'}
               {type === 'faq' && 'Frequently Asked Questions'}
-              {type === 'verified' && 'Official Drink Discount Verified Offer'}
+              {type === 'verified' && 'Official Target Discount Verified Offer'}
             </h3>
           </div>
           <button
@@ -42,11 +42,11 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
           {type === 'how-it-works' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                Claiming and redeeming your Drink Discount voucher takes less than 30 seconds:
+                Claiming and redeeming your Target Discount voucher takes less than 30 seconds:
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-7 h-7 rounded-full bg-[#FF671F] text-white flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-7 h-7 rounded-full bg-[#CC0000] text-white flex items-center justify-center font-bold text-xs shrink-0">
                     1
                   </div>
                   <div>
@@ -58,7 +58,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
                 </div>
 
                 <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-7 h-7 rounded-full bg-[#E61937] text-white flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-7 h-7 rounded-full bg-[#191D34] text-white flex items-center justify-center font-bold text-xs shrink-0">
                     2
                   </div>
                   <div>
@@ -76,7 +76,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
                   <div>
                     <h5 className="font-bold text-slate-800">Enjoy Your Savings</h5>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Apply at checkout for drinks, coffees, smoothies, sodas, and refreshing beverages!
+                      Apply at checkout for storewide Target discounts, online orders, and in-store purchases!
                     </p>
                   </div>
                 </div>
@@ -87,16 +87,16 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
           {type === 'faq' && (
             <div className="space-y-3">
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
-                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Is this valid on all drinks?</h5>
+                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Is this valid on all Target items?</h5>
                 <p className="text-xs text-slate-500">
-                  Yes! The promotional code applies storewide across popular beverages including hot & iced coffee, fountain sodas, milkshakes, smoothies, and specialty drinks.
+                  Yes! The promotional code applies storewide including groceries, home essentials, apparel, electronics, beauty, and daily items.
                 </p>
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Can I use it online and in-store?</h5>
                 <p className="text-xs text-slate-500">
-                  Yes, you can enter the code online at checkout or show the digital voucher to the cashier when ordering.
+                  Yes, you can enter the code online at checkout or scan the digital barcode voucher in-store.
                 </p>
               </div>
 
@@ -121,9 +121,9 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
               <div className="flex items-center gap-3 p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-900">
                 <ShieldCheck className="w-8 h-8 text-emerald-600 shrink-0" />
                 <div>
-                  <h5 className="font-bold text-xs sm:text-sm">Official Drink Discount Verification</h5>
+                  <h5 className="font-bold text-xs sm:text-sm">Official Target Discount Verification</h5>
                   <p className="text-xs text-emerald-700 mt-0.5">
-                    Security Token: #DD-2025-VCH-99410
+                    Security Token: #TGT-2025-VCH-88214
                   </p>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
               onClose();
               onClaimClick();
             }}
-            className="bg-[#0B4EA2] hover:bg-[#093e82] text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-sm transition-all"
+            className="bg-[#CC0000] hover:bg-[#B30000] text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-sm transition-all"
           >
             <span>Claim Discount Now</span>
             <span>→</span>
