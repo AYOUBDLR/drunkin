@@ -26,7 +26,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
             <h3 className="text-base font-bold text-white font-['Outfit',sans-serif]">
               {type === 'how-it-works' && 'How It Works'}
               {type === 'faq' && 'Frequently Asked Questions'}
-              {type === 'verified' && 'Official Target Discount Verified Offer'}
+              {type === 'verified' && 'Official Target Promo Verification'}
             </h3>
           </div>
           <button
@@ -42,7 +42,7 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
           {type === 'how-it-works' && (
             <div className="space-y-4">
               <p className="text-slate-600">
-                Claiming and redeeming your Target Discount voucher takes less than 30 seconds:
+                Claiming and redeeming your Target $500 Promo Code takes less than 1 minute:
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
@@ -50,33 +50,45 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
                     1
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-800">Click &quot;Claim Discount&quot;</h5>
+                    <h5 className="font-bold text-slate-800">Tap &quot;Start promotion&quot; below</h5>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Our system reserves a single-use verified promotional voucher code for your device.
+                      Takes less than 1 minute to begin your experience.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
-                  <div className="w-7 h-7 rounded-full bg-[#191D34] text-white flex items-center justify-center font-bold text-xs shrink-0">
+                  <div className="w-7 h-7 rounded-full bg-[#CC0000] text-white flex items-center justify-center font-bold text-xs shrink-0">
                     2
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-800">Tap &quot;Show Coupon Code&quot;</h5>
+                    <h5 className="font-bold text-slate-800">Select Preference & Confirm Email</h5>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Instantly unlock and access your promotional voucher code.
+                      Align your voucher code to your favorite store items.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
+                  <div className="w-7 h-7 rounded-full bg-[#0B1E3F] text-white flex items-center justify-center font-bold text-xs shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h5 className="font-bold text-slate-800">Complete 3-4 deals</h5>
+                    <p className="text-xs text-slate-500 mt-0.5">
+                      Complete 3-4 deals to claim your Target coupon.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3 p-3 bg-slate-50 rounded-xl border border-slate-100">
                   <div className="w-7 h-7 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-xs shrink-0">
-                    3
+                    4
                   </div>
                   <div>
-                    <h5 className="font-bold text-slate-800">Enjoy Your Savings</h5>
+                    <h5 className="font-bold text-slate-800">Get Your Unique Code</h5>
                     <p className="text-xs text-slate-500 mt-0.5">
-                      Apply at checkout for storewide Target discounts, online orders, and in-store purchases!
+                      Instant unlock with a visual claim voucher barcode.
                     </p>
                   </div>
                 </div>
@@ -87,30 +99,30 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
           {type === 'faq' && (
             <div className="space-y-3">
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
-                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Is this valid on all Target items?</h5>
+                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">What can I use this code for?</h5>
                 <p className="text-xs text-slate-500">
-                  Yes! The promotional code applies storewide including groceries, home essentials, apparel, electronics, beauty, and daily items.
+                  The promo code applies storewide across all Target items including groceries, apparel, home essentials, electronics, beauty, and daily necessities.
                 </p>
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Can I use it online and in-store?</h5>
                 <p className="text-xs text-slate-500">
-                  Yes, you can enter the code online at checkout or scan the digital barcode voucher in-store.
+                  Yes, you can enter the code online at Target.com checkout or scan the digital barcode voucher in-store at any Target register.
                 </p>
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
-                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Does the voucher expire?</h5>
+                <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Does the promo code expire?</h5>
                 <p className="text-xs text-slate-500">
-                  Once generated, your code is reserved for 24 hours to guarantee allocation. Make sure to claim and use it today.
+                  Once issued, your code is reserved for 24 hours to guarantee allocation. Make sure to claim and use it today.
                 </p>
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-100 space-y-1">
                 <h5 className="font-bold text-slate-800 text-xs sm:text-sm">Are there any fees to claim?</h5>
                 <p className="text-xs text-slate-500">
-                  None whatsoever. The voucher is 100% complimentary and instant.
+                  None whatsoever. Participating in the promotion is 100% complimentary.
                 </p>
               </div>
             </div>
@@ -121,9 +133,9 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
               <div className="flex items-center gap-3 p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-emerald-900">
                 <ShieldCheck className="w-8 h-8 text-emerald-600 shrink-0" />
                 <div>
-                  <h5 className="font-bold text-xs sm:text-sm">Official Target Discount Verification</h5>
+                  <h5 className="font-bold text-xs sm:text-sm">Official Target Verification</h5>
                   <p className="text-xs text-emerald-700 mt-0.5">
-                    Security Token: #TGT-2025-VCH-88214
+                    Security Token: #TGT-2025-PRM-500
                   </p>
                 </div>
               </div>
@@ -159,9 +171,9 @@ export const InfoModal: React.FC<InfoModalProps> = ({ type, onClose, onClaimClic
               onClose();
               onClaimClick();
             }}
-            className="bg-[#CC0000] hover:bg-[#B30000] text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-sm transition-all"
+            className="bg-[#CC0000] hover:bg-[#B30000] text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-sm transition-all cursor-pointer"
           >
-            <span>Claim Discount Now</span>
+            <span>Start Promotion Now</span>
             <span>→</span>
           </button>
         </div>
