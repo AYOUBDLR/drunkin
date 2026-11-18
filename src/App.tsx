@@ -111,16 +111,6 @@ export default function App() {
               </a>
             </div>
 
-            {/* Interactive Simulation Option for testing full flow */}
-            <div className="mt-4">
-              <button
-                onClick={startClaimFlow}
-                className="text-xs font-semibold text-[#CC0000] hover:text-[#B30000] hover:underline cursor-pointer transition-colors"
-              >
-                Preview verification sequence
-              </button>
-            </div>
-
           </div>
         )}
 
