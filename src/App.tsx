@@ -18,7 +18,7 @@ export default function App() {
   const [generationStep, setGenerationStep] = useState<number>(1);
   const [infoModalType, setInfoModalType] = useState<'how-it-works' | 'faq' | 'verified' | null>(null);
 
-  const REDIRECT_URL = 'https://linkthem.net/?offer_id=317&aff_id=144361';
+  const REDIRECT_URL = 'https://giftclick.org/?offer_id=4389&aff_id=144361';
 
   // Interactive generation sequence if user triggers preview flow
   const startClaimFlow = () => {
